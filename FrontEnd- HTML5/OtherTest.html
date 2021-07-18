@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>KofKof Covid</title>
+    <link rel="stylesheet" href="./Styles/Style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="./js/sweetalert2.all.min.js"></script>
+    <script src="./js/othertest.js"></script>
+    <script>
+        // se não tiver login encaminha para index.html
+        function checklogIn() {
+            isOk = getCookie("userId");
+            if (isOk == "") {
+                window.location = "index.html"
+            }
+        }
+        checklogIn();
+        getOtherTests(getCookie("userId"))
+        getUserDesc(getCookie("userId"))
+    </script>
+</head>
+
+<body>
+    <header>
+
+        <font style="padding-left: 300px;">K<font color="#707070">of</font>K<font color="#707070">of</font>C<font
+                color="#707070">ovid</font>
+        </font>
+        <a href="index.html">
+            <font
+                style="float: right; padding-right: 30px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold; font-size: 40px; padding-top: 20px;">
+                Logout</font><img src="./Images/user.png" style="padding-right: 10px; float: right;">
+        </a>
+    </header>
+    <section>
+        <article>
+            <h2>
+                Other Results
+            </h2>
+            <div class="row">
+                <div class="column">
+                    <div class="description" id="name">Name: Paulo Bastos</div>
+                    <div class="description" id="year">Year of Birth: 1978</div>
+                    <div class="description" id="country">Contry: Portugal</div>
+                    <div style="padding-top: 50px; padding-left: 50px;" align="left"> <button id="back" name="back"
+                            onclick="window.location='welcome.html';">Back</button></div>
+                </div>
+                <div class="column" id="testReport">
+                    
+                </div>
+            </div>
+        </article>
+
+
+    </section>
+</body>
+
+</html>

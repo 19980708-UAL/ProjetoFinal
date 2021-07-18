@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./Styles/Style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="./js/sweetalert2.all.min.js"></script> 
+    <script src="./js/profile.js"></script>
+    <script>
+        function loadPage(){
+            v_id = getCookie('userId');
+           getserv(v_id);
+        }
+        
+        // se não tiver login encaminha para index.html
+        function checklogIn() {
+                isOk = getCookie("userId");
+                if(isOk==""){
+                    window.location="index.html"
+                }
+            }
+            checklogIn();
+    </script>
+</head>
+<body>
+    <header>
+
+        <font style="padding-left: 300px;">K<font color="#707070">of</font>K<font color="#707070">of</font>C<font
+                color="#707070">ovid</font>
+        </font>
+        <a href="index.html">
+            <font
+                style="float: right; padding-right: 30px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold; font-size: 25px; padding-top: 15px;">
+                Logout</font><img src="./Images/user.png" style="padding-right: 10px; padding-top: 12px; float: right;" width="50">
+        </a>
+    </header>
+    <section>
+        <article>
+            <form action="">
+                <div class="row">
+                    <div class="column">
+                        <label for="name">Name</label><br>
+                        <input type="text" id="name" name="name" value=""><br>
+                        <label for="email">Email</label><br>
+                        <input type="text" id="email" name="email" value=""><br>
+                        <label for="years">Year of Birth</label><br>
+                        <select name="years" id="years">
+                            <option value=""></option>
+                        </select><br>
+                        <label for="country">Country</label><br>
+                        <select name="country" id="country" style="width: 100%;">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="column">
+                        <label for="user">User</label><br>
+                        <input type="text" id="user" name="user" value=""><br>
+                        <label for="password">Password</label><br>
+                        <input type="password" id="password" name="password"><br>
+                        <label for="rpassword">Repeat Password</label><br>
+                        <input type="password" id="rpassword" name="rpassword"><br>
+                        <div style="padding-top: 50px;" align="center">
+                            <button type="button" id="cancel" name="cancel" onclick="window.location='welcome.html';"
+                                style="background-color: aqua;">Cancel</button>&nbsp;&nbsp;&nbsp;
+                            
+                            <button type="button" id="save" name="save"
+                                onclick="saveuser();">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </article>
+
+
+    </section>
+    <script>
+        // inicialização da página
+        loadPage();
+    </script>
+</body>
+
+</html>

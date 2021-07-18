@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>KofKof Covid</title>
+    <link rel="stylesheet" href="./Styles/Style.css">
+    <link rel="stylesheet" href="./Styles/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="./js/sweetalert2.all.min.js"></script> 
+    <script src="./js/login.js"></script> 
+    <script>
+        document.cookie ="userId="
+    </script>
+</head>
+
+<body>
+    <header>
+
+        <font style="padding-left: 300px;">K<font color="#707070">of</font>K<font color="#707070">of</font>C<font
+                color="#707070">ovid</font>
+        </font>
+        <a href="#" onclick="loginForm();" style="width:auto;">
+            <font
+                style="float: right; padding-right: 30px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold; font-size: 25px; padding-top: 15px;">
+                Login</font><img src="./Images/user.png" style="padding-right: 10px; padding-top: 12px; float: right;" width="50">
+        </a>
+
+    </header>
+    <section>
+        <article>
+            <p>
+                Nowadays, society faces challenges that test all the knowledge acquired and obliges us all, as beings
+                belonging to the same ecosystem to work in perfect harmony.<br>
+                <br>
+                Recently, one of these challenges emerged in the form of a pandemic, which was given the name
+                COVID-19.<br>
+                <br>
+                In the face of these challenges, this application was created, supported by Artificial Intelligence with
+                the aim of providing the global community with a non-invasive form of personal pre-screening, anywhere
+                and anytime, through which a person can record and make upload a sound from yourself or someone else and
+                check with the indicated degree of accuracy if you have COVID-19.<br>
+            </p>
+
+        </article>
+
+        <div style="padding-top: 50px;" align="right"> <button id="registar" name="registar"
+                onclick="window.location='register.html';">Register</button></div>
+    </section>
+ 
+    <script>
+        // mostra login
+        var modal = document.getElementById('id01');
+
+        // quando o utlizador clica fora da caixa de login
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

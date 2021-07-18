@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="./Styles/Style.css">
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <header>
+
+        <font style="padding-left: 300px;">K<font color="#707070">of</font>K<font color="#707070">of</font>C<font
+                color="#707070">ovid</font>
+        </font>
+        <a href="index.html">
+            <font
+                style="float: right; padding-right: 30px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold; font-size: 25px; padding-top: 15px;">
+                Logout</font><img src="./Images/user.png" style="padding-right: 10px; padding-top: 12px; float: right;"
+                width="50">
+        </a>
+        <script>
+            function getCookie(cname) {
+                let name = cname + "=";
+                let ca = document.cookie.split(';');
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+            // se não tiver login encaminha para index.html
+            function checklogIn() {
+                isOk = getCookie("userId");
+                if (isOk == "") {
+                    window.location = "index.html"
+                }
+            }
+            checklogIn();
+        </script>
+    </header>
+
+    <section>
+        <h1>Result</h1>
+
+        <h2>
+            <div id="Result" style="font-size: 200px; color:#AFD569; text-align: center; vertical-align: middle;"> </div>
+        </h2>
+        <div style="padding-top: 50px;" align="right"> <button id="next" name="next"
+                onclick="window.location='OtherTest.html';">next</button></div>
+        </article>
+
+
+    </section>
+    <script>
+        String.prototype.initCap = function () {
+            return this.toLowerCase().replace(/(?:^|\s)[a-z]/g, function (m) {
+                return m.toUpperCase();
+            });
+        };
+        function getResult() {
+            result = getCookie("result");
+            document.getElementById("Result").innerHTML = result.initCap();
+        }
+        getResult();
+    </script>
+</body>
+
+</html>
