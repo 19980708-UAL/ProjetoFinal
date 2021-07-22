@@ -52,7 +52,8 @@ Outras pastas:
 
     Audio: Pasta repartida em 2 (Positive e Negative) onde estão os áudios utilizados no nosso estudo; 
 
-    ModeloAdam512: Pasta onde está guardado o nosso modelo de inteligência Artificial; 
+    ModeloAdam512: Pasta onde está guardado o nosso modelo de inteligência Artificial;
+    Link Download: https://alumniual-my.sharepoint.com/:f:/g/personal/19980708_students_ual_pt/EjFIvL9eJNJPv2CCnNLafiIBcB62aHawDcHXuxqZ0pR_KQ?e=hj3Jdr
 
     Script BD Oracle XE: Script de criação da base de dados Oracle XE; 
 
